@@ -4,7 +4,7 @@ import pkg from './package.json'
 import { defineConfig, loadEnv } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
 
-const CONSOLE_CODE = `console.log(\`%c🍊%c Shikwasa Podcast Player v${pkg.version} %c https://shikwasa.js.org\`,'background-color:#00869B40;padding:4px;','background:#00869B80;color:#fff;padding:4px 0','padding: 2px 0;')`
+const CONSOLE_CODE = `console.log(\`%c🍊%c Shikwasa XC2 Podcast Player v${pkg.version} %c https://shikwasa.js.org\`,'background-color:#00869B40;padding:4px;','background:#00869B80;color:#fff;padding:4px 0','padding: 2px 0;')`
 
 function replaceHTMLPlugin(replaceStrings) {
   return {
@@ -12,9 +12,9 @@ function replaceHTMLPlugin(replaceStrings) {
     transformIndexHtml: {
       enforce: 'pre',
       transform: (html) => {
-        for(const [key, value] of Object.entries(replaceStrings)) {
+        for (const [key, value] of Object.entries(replaceStrings)) {
           const regex = new RegExp(`<%- ${key} %>`, 'gm')
-          html = html.replace(regex,value)
+          html = html.replace(regex, value)
         }
         return html
       },
@@ -55,7 +55,7 @@ export default defineConfig(({ mode }) => {
           template: `pages/${name}.html`,
           chunks: name,
           entry: `pages/${name}.js`,
-        }
+        },
       }
     }
     if (process.env.TARGET === 'demo') {
