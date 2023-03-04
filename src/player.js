@@ -343,7 +343,7 @@ class Player {
     }
   }
 
-  seekBySpan({ time = 10, forward = true } = {}) {
+  seekBySpan({ time = 30, forward = true } = {}) {
     const currentTime = this._canplay ? this.audio.currentTime : this._initSeek
     const targetTime = currentTime + time * (forward ? 1 : -1)
     this.seek(targetTime)

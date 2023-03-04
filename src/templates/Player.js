@@ -46,8 +46,8 @@ const PlayerTemplate = /* template */ `
               title="change playback rate"
               aria-live="polite">1.0x</button>
             <button class="shk-btn shk-btn_backward"
-              aria-label="rewind 10 seconds"
-              title="rewind 10 seconds">
+              aria-label="rewind 30 seconds"
+              title="rewind 30 seconds">
               <svg aria-hidden="true">
                 <use xlink:href="#shk-icon_backward" />
               </svg>
@@ -60,7 +60,7 @@ const PlayerTemplate = /* template */ `
                 <use xlink:href="#shk-icon_pause" />
               </svg>
             </button>
-            <button class="shk-btn shk-btn_forward" aria-label="forward 10 seconds" title="forward 10 seconds">
+            <button class="shk-btn shk-btn_forward" aria-label="forward 30 seconds" title="forward 30 seconds">
               <svg aria-hidden="true">
                 <use xlink:href="#shk-icon_forward" />
               </svg>

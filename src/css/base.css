@@ -207,10 +207,20 @@
 a.shk-btn:visited {
   color: var(--color-button);
 }
-.shk-btn svg {
-  width: 20px;
+.shk-btn:not(.shk-btn_more, .shk-btn_volume) svg {
+  height: 28px;
+  vertical-align: middle;
+  width: 28px;
+}
+.shk-btn_more svg {
   height: 20px;
   vertical-align: middle;
+  width: 20px;
+}
+.shk-controls_extra svg {
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
 }
 .shk-controls {
   position: relative;
@@ -460,7 +470,7 @@ svg.shk-btn_mute,
 }
 @media (max-width: 640px) {
   .shk-player {
-    height: 100px;
+    height: 110px;
     padding: 5px 16px;
     box-shadow: var(--shadow-body-mobile);
   }
