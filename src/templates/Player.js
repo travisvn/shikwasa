@@ -25,6 +25,24 @@ const PlayerTemplate = /* template */ `
       </div>
     </div>
     <div class="shk-body">
+      <div class="shk-display">
+        <span class="shk-loader" aria-live="polite">
+          <span class="shk-visuallyhidden" tabindex="-1">loading</span>
+          <svg aria-hidden="true" aria-label="loading" aria-live="polite" viewbox="0 0 66 66">
+            <circle cx="33" cy="33" r="30" fill="transparent" stroke="url(#shk-gradient)" stroke-dasharray="170"
+              stroke-dashoffset="20" stroke-width="6" />
+            <lineargradient id="shk-gradient">
+              <stop offset="50%" stop-color="currentColor" />
+              <stop offset="65%" stop-color="currentColor" stop-opacity=".5" />
+              <stop offset="100%" stop-color="currentColor" stop-opacity="0" />
+            </lineargradient>
+          </svg>
+        </span>
+        <span class="shk-time">
+          <span class="shk-time_now">00:00</span><span class="shk-time_duration">00:00</span>
+        </span>
+        <div class="shk-live">live</div>
+      </div>
       <div class="shk-cover">
         <div class="shk-img"></div>
       </div>
@@ -82,24 +100,13 @@ const PlayerTemplate = /* template */ `
             </button>
           </div>
         </div>
-        <div class="shk-display">
-          <span class="shk-loader" aria-live="polite">
-            <span class="shk-visuallyhidden" tabindex="-1">loading</span>
-            <svg aria-hidden="true" aria-label="loading" aria-live="polite" viewbox="0 0 66 66">
-              <circle cx="33" cy="33" r="30" fill="transparent" stroke="url(#shk-gradient)" stroke-dasharray="170"
-                stroke-dashoffset="20" stroke-width="6" />
-              <lineargradient id="shk-gradient">
-                <stop offset="50%" stop-color="currentColor" />
-                <stop offset="65%" stop-color="currentColor" stop-opacity=".5" />
-                <stop offset="100%" stop-color="currentColor" stop-opacity="0" />
-              </lineargradient>
-            </svg>
-          </span>
-          <span class="shk-time">
-            <span class="shk-time_now">00:00</span><span class="shk-time_duration">00:00</span>
-          </span>
-          <div class="shk-live">live</div>
-        </div>
+      </div>
+      <div class="shk-end">
+        <button class="shk-btn shk-btn_close_new" aria-label="close player" title="close player">
+          <svg aria-hidden="true">
+            <use xlink:href="#shk-icon_close_new" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>

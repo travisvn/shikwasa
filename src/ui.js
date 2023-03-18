@@ -25,6 +25,7 @@ export default class UI {
       },
       innerHTML: PlayerComp,
     })
+    this.closeBtnNew = this.el.querySelector('.shk-btn_close_new')
     this.playBtn = this.el.querySelector('.shk-btn_toggle')
     this.fwdBtn = this.el.querySelector('.shk-btn_forward')
     this.bwdBtn = this.el.querySelector('.shk-btn_backward')

@@ -100,6 +100,9 @@ class Player {
     this.ui.playBtn.addEventListener('click', () => {
       this.toggle()
     })
+    this.ui.closeBtnNew.addEventListener('click', () => {
+      this.close()
+    })
     this.ui.muteBtn.addEventListener('click', () => {
       this.muted = !this.muted
     })
@@ -382,6 +385,11 @@ class Player {
     this.audio.src = ''
     this.audio.load()
     this.audio = null
+  }
+
+  close() {
+    this.pause()
+    this.options.container.style.visibility = 'hidden'
   }
 
   destroy() {
