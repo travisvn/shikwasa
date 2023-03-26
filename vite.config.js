@@ -4,7 +4,7 @@ import pkg from './package.json'
 import { defineConfig, loadEnv } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
 
-const CONSOLE_CODE = `console.log(\`%c🍊%c Shikwasa XC2 Podcast Player v${pkg.version} %c https://shikwasa.js.org\`,'background-color:#00869B40;padding:4px;','background:#00869B80;color:#fff;padding:4px 0','padding: 2px 0;')`
+const CONSOLE_CODE = `console.log(\`%c🍊%c Shikwasa XC Podcast Player v${pkg.version} %c https://shikwasa.js.org\`,'background-color:#00869B40;padding:4px;','background:#00869B80;color:#fff;padding:4px 0','padding: 2px 0;')`
 
 function replaceHTMLPlugin(replaceStrings) {
   return {
